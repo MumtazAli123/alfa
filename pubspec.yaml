@@ -1,0 +1,43 @@
+name: alfa
+version: 1.0.0+1
+publish_to: none
+description: A new Flutter project.
+environment: 
+  sdk: '>=3.4.3 <4.0.0'
+
+dependencies: 
+  cupertino_icons: ^1.0.6
+  get: 4.6.6
+  url_launcher: ^6.3.0
+  url_strategy: 0.2.0
+  google_fonts: 6.2.1
+  firebase_auth: any
+  shared_preferences: any
+  country_state_city_picker: ^1.2.8
+  csc_picker: ^0.2.7
+  country_picker: any
+  carousel_slider: 4.2.1
+  firebase_core: any
+  getwidget: 4.0.0
+  flutter: 
+    sdk: flutter
+
+dev_dependencies: 
+  flutter_lints: ^4.0.0
+  flutter_launcher_icons: ^0.13.1
+  flutter_test: 
+    sdk: flutter
+
+flutter_icons: 
+  image_path: assets/icons/meerLogo.png
+  android: true
+  ios: true
+  remove_alpha_ios: true
+
+flutter: 
+  assets: 
+    - assets/
+    - assets/icons/
+    - assets/images/
+  uses-material-design: true
+

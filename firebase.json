@@ -1,0 +1,40 @@
+{
+  "flutter": {
+    "platforms": {
+      "ios": {
+        "default": {
+          "projectId": "alpha-website-84291",
+          "appId": "1:70994060664:ios:c1af044d415ba3ba00548d",
+          "uploadDebugSymbols": false,
+          "fileOutput": "ios/Runner/GoogleService-Info.plist"
+        }
+      },
+      "macos": {
+        "default": {
+          "projectId": "alpha-website-84291",
+          "appId": "1:70994060664:ios:c1af044d415ba3ba00548d",
+          "uploadDebugSymbols": false,
+          "fileOutput": "macos/Runner/GoogleService-Info.plist"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "alpha-website-84291",
+          "configurations": {
+            "ios": "1:70994060664:ios:c1af044d415ba3ba00548d",
+            "macos": "1:70994060664:ios:c1af044d415ba3ba00548d",
+            "web": "1:70994060664:web:2565b2fb3ff7dbfa00548d"
+          }
+        }
+      }
+    }
+  },
+  "hosting": {
+    "public": "build/web",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
