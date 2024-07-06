@@ -19,6 +19,8 @@ dependencies:
   carousel_slider: 4.2.1
   firebase_core: any
   getwidget: 4.0.0
+  calendar_view: 1.2.0
+  quickalert: 1.1.0
   flutter: 
     sdk: flutter
 

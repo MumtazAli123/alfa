@@ -76,10 +76,7 @@ class _MyDrawerState extends State<MyDrawer> {
                   color: Colors.black),
             ),
             onTap: () {
-              // setState(() {
-              //   index = 1;
-              // });
-              Navigator.pop(context);
+              Get.toNamed('/study');
             },
           ),
           ListTile(
@@ -95,10 +92,7 @@ class _MyDrawerState extends State<MyDrawer> {
                   color: Colors.black),
             ),
             onTap: () {
-              // setState(() {
-              //   index = 2;
-              // });
-              Navigator.pop(context);
+              Get.toNamed('/universities');
             },
           ),
           ListTile(
@@ -114,10 +108,7 @@ class _MyDrawerState extends State<MyDrawer> {
                   color: Colors.black),
             ),
             onTap: () {
-              // setState(() {
-              //   index = 3;
-              // });
-              Navigator.pop(context);
+              Get.toNamed('/about');
             },
           ),
           ListTile(
@@ -133,10 +124,8 @@ class _MyDrawerState extends State<MyDrawer> {
                   color: Colors.black),
             ),
             onTap: () {
-              // setState(() {
-              //   index = 4;
-              // });
-              Navigator.pop(context);
+              Get.toNamed('/contact');
+
             },
           ),
         ],

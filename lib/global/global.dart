@@ -22,7 +22,6 @@ Platform platform =
 
 // locally database platform sharedPreferences, NSUserDefaults key ios and android platform name
 
-String? userCurrentLocationAddress = "";
 
 final hotelsImagesList = [
   "assets/images/popular_1.jpg",

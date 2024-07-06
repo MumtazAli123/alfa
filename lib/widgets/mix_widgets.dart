@@ -149,7 +149,7 @@ urlLauncher(String imgPath, String url) {
   decoration: BoxDecoration(
   color: Colors.green,
   image: DecorationImage(
-  image: AssetImage('assets/whatsapp.png'),
+  image: AssetImage('assets/images/whatsapp.png'),
   fit: BoxFit.cover,
   ),
   borderRadius: BorderRadius.circular(50),

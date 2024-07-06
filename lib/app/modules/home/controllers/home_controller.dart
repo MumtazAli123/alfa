@@ -33,6 +33,8 @@ class HomeController extends GetxController {
 
   var scrollController = ScrollController();
 
+  var isServiceExpanded = false.obs;
+
   void changeIndex(int i) {
     index = i;
     update();
