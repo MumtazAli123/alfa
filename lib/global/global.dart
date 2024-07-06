@@ -24,12 +24,12 @@ Platform platform =
 
 
 final hotelsImagesList = [
-  "assets/images/popular_1.jpg",
+  "assets/images/mekkah.webp",
   "assets/images/popular_2.jpg",
   "assets/images/popular_3.jpg",
   "assets/images/popular_4.jpg",
   "assets/images/popular_5.jpg",
-  "assets/images/popular_6.jpg",
+  "assets/images/umrah.jpeg",
 ];
 
 final List<String> hotelsNamesList = [

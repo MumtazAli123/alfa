@@ -148,13 +148,13 @@ class _WebViewState extends State<WebView> {
         Stack(
           children: [
             Container(
-              height: 300,
+              height: 400,
               decoration: BoxDecoration(
                 // color: Colors.grey[300],
               ),
               child: GFCarousel(
                 // width: double.infinity,
-                height: 300,
+                height: 400,
                 autoPlay: true,
                 autoPlayInterval: Duration(seconds: 3),
                 autoPlayAnimationDuration: Duration(milliseconds: 800),
@@ -169,7 +169,7 @@ class _WebViewState extends State<WebView> {
                         borderRadius: BorderRadius.circular(10),
                         image: DecorationImage(
                           image: AssetImage(url),
-                          fit: BoxFit.cover,
+                          fit: BoxFit.fill,
                         ),
                       ),
                     );
@@ -181,8 +181,8 @@ class _WebViewState extends State<WebView> {
           ],
         ),
         SizedBox(height: 10),
-       Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+       Wrap(
+         alignment: WrapAlignment.spaceAround,
          children: [
            Column(
              children: [
@@ -205,16 +205,21 @@ class _WebViewState extends State<WebView> {
                   ),
                 ),
                 SizedBox(height: 10),
-                Container(
-                  width: 600,
-                  height: 390,
-                  decoration: BoxDecoration(
-                    color: Colors.grey[100],
-                    image: DecorationImage(
-                      image: AssetImage('assets/images/dubai.jpeg'),
-                      fit: BoxFit.cover,
+                GestureDetector(
+                  onTap: () {
+                   _buildImageDialog(context);
+                  },
+                  child: Container(
+                    width: 600,
+                    height: 390,
+                    decoration: BoxDecoration(
+                      color: Colors.grey[100],
+                      image: DecorationImage(
+                        image: AssetImage('assets/images/umrah.jpeg'),
+                        fit: BoxFit.fill,
+                      ),
+                      borderRadius: BorderRadius.circular(10),
                     ),
-                    borderRadius: BorderRadius.circular(10),
                   ),
                 ),
               ],
@@ -510,63 +515,134 @@ class _WebViewState extends State<WebView> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              GFImageOverlay(
-                alignment: Alignment.center,
-                height: 200,
+              // GFImageOverlay(
+              //   alignment: Alignment.center,
+              //   height: 200,
+              //   width: 300,
+              //   image: AssetImage('assets/Icons/airplane.jpg'),
+              //   colorFilter: ColorFilter.mode(
+              //       Colors.black.withOpacity(0.3), BlendMode.darken),
+              //   child: wText(
+              //     'Qatar Airways',
+              //     color: Colors.white,
+              //   ),
+              // ),
+              // SizedBox(width: 10.0),
+              // GFImageOverlay(
+              //   alignment: Alignment.center,
+              //   height: 200,
+              //   width: 300,
+              //   image: AssetImage('assets/Icons/emirates.jpg'),
+              //   colorFilter: ColorFilter.mode(
+              //       Colors.black.withOpacity(0.3), BlendMode.darken),
+              //   child: wText(
+              //     'Emirates Airlines',
+              //     color: Colors.white,
+              //   ),
+              // ),
+              // SizedBox(width: 10.0),
+              // GFImageOverlay(
+              //   alignment: Alignment.center,
+              //   height: 200,
+              //   width: 300,
+              //   image: AssetImage('assets/Icons/etihad.webp'),
+              //   colorFilter: ColorFilter.mode(
+              //       Colors.black.withOpacity(0.3), BlendMode.darken),
+              //   child: wText(
+              //     'Etihad Airways',
+              //     color: Colors.white,
+              //   ),
+              // ),
+              SizedBox(
                 width: 300,
-                image: AssetImage('assets/Icons/airplane.jpg'),
-                colorFilter: ColorFilter.mode(
-                    Colors.black.withOpacity(0.3), BlendMode.darken),
-                child: wText(
-                  'Qatar Airways',
-                  color: Colors.white,
+                height: 300,
+                child: GFCard(
+                  elevation: 10,
+                  gradient: LinearGradient(
+                    colors: [Colors.green[100]!, Colors.grey[50]!],
+                  ),
+                  showImage: true,
+                  image: Image.asset('assets/icons/airplane.jpg'),
+                  content: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      wText('Qatar Airways', color: Colors.green[800]),
+                      aText('Qatar Airways is the national airline of Qatar'),
+                    ],
+                  ),
                 ),
               ),
-              SizedBox(width: 10.0),
-              GFImageOverlay(
-                alignment: Alignment.center,
-                height: 200,
+              SizedBox(width: 14.0),
+              SizedBox(
                 width: 300,
-                image: AssetImage('assets/Icons/emirates.jpg'),
-                colorFilter: ColorFilter.mode(
-                    Colors.black.withOpacity(0.3), BlendMode.darken),
-                child: wText(
-                  'Emirates Airlines',
-                  color: Colors.white,
+                height: 300,
+                child: GFCard(
+                  elevation: 10,
+                  gradient: LinearGradient(
+                    colors: [Colors.purple[100]!, Colors.grey[50]!],
+                  ),
+                  showImage: true,
+                  image: Image.asset('assets/icons/emirates.jpg'),
+                  content: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      wText('Emirates Airlines', color: Colors.green[800]),
+                      aText('Emirates Airlines is the national airline of UAE'),
+                    ],
+                  ),
                 ),
               ),
-              SizedBox(width: 10.0),
-              GFImageOverlay(
-                alignment: Alignment.center,
-                height: 200,
+              SizedBox(width: 14.0),
+              SizedBox(
                 width: 300,
-                image: AssetImage('assets/Icons/etihad.webp'),
-                colorFilter: ColorFilter.mode(
-                    Colors.black.withOpacity(0.3), BlendMode.darken),
-                child: wText(
-                  'Etihad Airways',
-                  color: Colors.white,
+                height: 300,
+                child: GFCard(
+                  elevation: 10,
+                  gradient: LinearGradient(
+                    colors: [Colors.redAccent[100]!, Colors.grey[50]!],
+                  ),
+                  showImage: true,
+                  image: Image.asset('assets/icons/etihad.webp'),
+                  content: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      wText('Etihad Airways', color: Colors.green[800]),
+                      aText('Etihad Airways is the national airline of UAE'),
+                    ],
+                  ),
                 ),
               ),
-              // Image.asset(
-              //   'assets/Icons/airplane.jpg',
-              //   width: 200,
-              // ),
-              // SizedBox(width: 14.0),
-              // Image.asset(
-              //   'assets/icons/studentvisa.jpg',
-              //   width: 200,
-              // ),
-              // SizedBox(width: 14.0),
-              // Image.asset(
-              //   'assets/images/mekkah.webp',
-              //   width: 200,
-              // ),
-              // SizedBox(width: 14.0),
+              SizedBox(width: 14.0),
+              SizedBox(
+                width: 300,
+                height: 300,
+                child: GFCard(
+                  elevation: 10,
+                  gradient: LinearGradient(
+                    colors: [Colors.orange[100]!, Colors.grey[50]!],
+                  ),
+                  showImage: true,
+                  image: Image.asset('assets/images/dubai.jpeg'),
+                  content: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      wText('Dubai', color: Colors.green[800]),
+                      aText('Dubai is a city in the United Arab Emirates'),
+                    ],
+                  ),
+                ),
+              ),
+
               // Image.asset(
               //   'assets/images/dubai.jpeg',
               //   width: 200,
               // ),
+
+
             ],
           ),
         ),
@@ -617,50 +693,6 @@ class _WebViewState extends State<WebView> {
           ),
         ],
       ),
-    );
-  }
-
-  void _buildBookingDialog(BuildContext context) {
-    showDialog(
-      context: context,
-      builder: (context) {
-        return AlertDialog(
-          title: Text('Book an Appointment'),
-          content: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              TextField(
-                decoration: InputDecoration(
-                  hintText: 'Name',
-                ),
-              ),
-              TextField(
-                decoration: InputDecoration(
-                  hintText: 'Email',
-                ),
-              ),
-              TextField(
-                decoration: InputDecoration(
-                  hintText: 'Phone',
-                ),
-              ),
-              TextField(
-                decoration: InputDecoration(
-                  hintText: 'Message',
-                ),
-              ),
-            ],
-          ),
-          actions: [
-            ElevatedButton(
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              child: Text('Submit'),
-            ),
-          ],
-        );
-      },
     );
   }
 
@@ -785,7 +817,6 @@ class _WebViewState extends State<WebView> {
       )
     );
   }
-
   void _buildAirlineTicketDialog(BuildContext context) {
     QuickAlert.show(
         context: context,
@@ -804,7 +835,6 @@ class _WebViewState extends State<WebView> {
           ],
         ));
   }
-
   void _buildAccomodationDialog(BuildContext context) {
     QuickAlert.show(
         context: context,
@@ -822,6 +852,50 @@ class _WebViewState extends State<WebView> {
           ],
         ));
   }
+  void _buildBookingDialog(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          title: Text('Book an Appointment'),
+          content: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              TextField(
+                decoration: InputDecoration(
+                  hintText: 'Name',
+                ),
+              ),
+              TextField(
+                decoration: InputDecoration(
+                  hintText: 'Email',
+                ),
+              ),
+              TextField(
+                decoration: InputDecoration(
+                  hintText: 'Phone',
+                ),
+              ),
+              TextField(
+                decoration: InputDecoration(
+                  hintText: 'Message',
+                ),
+              ),
+            ],
+          ),
+          actions: [
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              child: Text('Submit'),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
 
   _buildUniversity() {
     return GFCard(
@@ -953,6 +1027,40 @@ class _WebViewState extends State<WebView> {
           ),
         ],
       ),
+    );
+  }
+
+  void _buildImageDialog(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          title: Text('Umrah'),
+          content: Container(
+            width: 700,
+            height: 800,
+            decoration: BoxDecoration(
+              color: Colors.grey[100],
+              image: DecorationImage(
+                image: AssetImage('assets/images/umrah.jpeg'),
+                fit: BoxFit.fill,
+              ),
+              borderRadius: BorderRadius.circular(10),
+            ),
+          ),
+          actions: [
+            ElevatedButton(
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(Colors.red),
+              ),
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              child: wText('Close', color: Colors.white),
+            ),
+          ],
+        );
+      },
     );
   }
 }

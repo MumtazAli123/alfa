@@ -110,7 +110,7 @@ cText(String text, { Color? color, double size = 16}) {
   return Text(
     textAlign: TextAlign.start,
     text,
-    style: GoogleFonts.paprika(
+    style: GoogleFonts.sail(
       fontSize: size,
       fontWeight: FontWeight.bold,
       color: color,
