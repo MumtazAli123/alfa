@@ -54,10 +54,6 @@ class _WebViewState extends State<WebView> {
       child: AnimatedContainer(
         duration: Duration(seconds: 2),
         decoration: BoxDecoration(
-          // image: DecorationImage(
-          //   image: AssetImage('assets/images/main.jpg'),
-          //   fit: BoxFit.cover,
-          // ),
         ),
         child: SingleChildScrollView(
           child: Column(
@@ -91,34 +87,20 @@ class _WebViewState extends State<WebView> {
         // university
         TextButton(
           onPressed: () {
-            QuickAlert.show(
-              context: context,
-              type: QuickAlertType.info,
-              title: 'Universities',
-              text:
-                  'We provide information about universities and colleges in different countries',
-              width: 500,
-            );
+            Get.toNamed('/universities');
           },
           child: wText('Universities'),
         ),
         // about
         TextButton(
           onPressed: () {
-            QuickAlert.show(
-              context: context,
-              type: QuickAlertType.info,
-              title: 'About Us',
-              text:
-                  'We are a consulting firm that provides visa assistance to students who want to study abroad',
-              width: 500,
-            );
+            Get.toNamed('/about');
           },
           child: wText('About Us'),
         ),
         // whatsapp
         TextButton(onPressed: (){
-          launch('https://wa.me/923022538289');
+         Get.toNamed('/contact');
         }, child: wText('Contact Us')),
         IconButton(
           onPressed: () {

@@ -1,6 +1,11 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, prefer_const_constructors_in_immutables, avoid_print
 
+import 'package:flip_card/flip_card.dart';
 import 'package:flutter/material.dart';
+import 'package:getwidget/components/button/gf_button.dart';
+import 'package:getwidget/components/button/gf_button_bar.dart';
+import 'package:getwidget/components/card/gf_card.dart';
+import 'package:getwidget/components/list_tile/gf_list_tile.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -172,5 +177,61 @@ urlLauncher(String imgPath, String url) {
         ],
       ),
     ),
+  );
+}
+
+wBuildCard({required String title, IconData? icon, required String image, required Null Function() onTap}) {
+  return FlipCard(front: GFCard(
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(10),
+    ),
+    semanticContainer: true,
+    clipBehavior: Clip.antiAliasWithSaveLayer,
+    showImage: true,
+    colorFilter: ColorFilter.mode(Colors.black.withOpacity(0.5), BlendMode.darken),
+
+    title: GFListTile(
+        title: Text(title),
+        subTitle: Text('Explore $title'),
+        icon: Icon(icon, color: Colors.red,)
+    ),
+    image: Image.asset(image, fit: BoxFit.cover, height: 200, width: double.infinity,),
+    content: Text('Explore $title'),
+    buttonBar: GFButtonBar(
+      children: [
+        GFButton(
+          onPressed: onTap,
+          text: 'Explore',
+          color: Colors.green,
+        ),
+      ],
+    ),
+  ),
+      back: GFCard(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(10),
+        ),
+        semanticContainer: true,
+        clipBehavior: Clip.antiAliasWithSaveLayer,
+        showImage: true,
+        colorFilter: ColorFilter.mode(Colors.black.withOpacity(0.5), BlendMode.darken),
+
+        title: GFListTile(
+            title: Text(title),
+            subTitle: Text('Explore $title'),
+            icon: Icon(icon, color: Colors.red,)
+        ),
+        image: Image.asset(image, fit: BoxFit.cover, height: 200, width: double.infinity,),
+        content: Text('Explore $title'),
+        buttonBar: GFButtonBar(
+          children: [
+            GFButton(
+              onPressed: onTap,
+              text: 'Explore',
+              color: Colors.green,
+            ),
+          ],
+        ),
+      )
   );
 }
