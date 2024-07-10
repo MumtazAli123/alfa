@@ -84,6 +84,13 @@ class _WebViewState extends State<WebView> {
       ),
       title: wText("IFA's Consultancy"),
       actions: [
+        // Study Abroad
+        TextButton(
+          onPressed: () {
+            Get.toNamed('/study');
+          },
+          child: wText('Study Abroad'),
+        ),
         // university
         TextButton(
           onPressed: () {

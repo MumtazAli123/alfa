@@ -235,3 +235,61 @@ wBuildCard({required String title, IconData? icon, required String image, requir
       )
   );
 }
+
+wBuildScholarshipCard({required String title, required String image, required Null Function() onTap}) {
+  return FlipCard(
+      front: GFCard(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(10),
+        ),
+        semanticContainer: true,
+        clipBehavior: Clip.antiAliasWithSaveLayer,
+        showImage: true,
+        colorFilter: ColorFilter.mode(Colors.black.withOpacity(0.5), BlendMode.darken),
+
+        title: GFListTile(
+            title: Text(title),
+            subTitle: Text('Scholarship $title'),
+            icon: Icon(Icons.school, color: Colors.red,)
+        ),
+        image: Image.asset(image, fit: BoxFit.cover, height: 200, width: double.infinity,),
+        content: Text('Scholarship $title'),
+        buttonBar: GFButtonBar(
+          children: [
+            GFButton(
+              onPressed: onTap,
+              text: 'Scholarship',
+              color: Colors.green,
+            ),
+          ],
+        ),
+      ),
+      back: GFCard(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(10),
+        ),
+        semanticContainer: true,
+        clipBehavior: Clip.antiAliasWithSaveLayer,
+        showImage: true,
+        colorFilter: ColorFilter.mode(Colors.black.withOpacity(0.5), BlendMode.darken),
+
+        title: GFListTile(
+            title: Text(title),
+            subTitle: Text('Scholarship $title'),
+            icon: Icon(Icons.school, color: Colors.red,)
+        ),
+        image: Image.asset(image, fit: BoxFit.cover, height: 200, width: double.infinity,),
+        content: Text('Scholarship $title'),
+        buttonBar: GFButtonBar(
+          children: [
+            GFButton(
+              onPressed: onTap,
+              text: 'Scholarship',
+              color: Colors.green,
+            ),
+          ],
+        ),
+      )
+  );
+}
+
