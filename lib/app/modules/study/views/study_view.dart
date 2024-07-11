@@ -434,7 +434,7 @@ class _StudyViewState extends State<StudyView> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(padding: const EdgeInsets.only(left: 18.0),
-          child: cText('Scholarship', size: 30),
+          child: cText('Scholarship for Student', size: 30),
         ),
         SizedBox(height: 10),
         Row(
